@@ -83,7 +83,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\vehicle.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarPoolingDriverAPP\CarPoolingDriverAPP.csproj">
       <Project>{82B43527-6629-4751-AC78-53768B2A4E83}</Project>

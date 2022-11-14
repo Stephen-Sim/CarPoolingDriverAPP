@@ -21,3 +21,4 @@ C:\Users\USER\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\
 C:\Users\USER\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\USER\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\ref\CarPoolingDriverAPP.dll
 C:\Users\USER\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Menu\Vehicle\VehicleInformationPage.xaml.g.cs
+C:\Users\USER\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Menu\Vehicle\AddOrEditVehiclePage.xaml.g.cs

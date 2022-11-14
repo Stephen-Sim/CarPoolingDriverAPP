@@ -1935,6 +1935,7 @@ int drawable request 0x7f070093
 int drawable test_custom_background 0x7f070094
 int drawable tooltip_frame_dark 0x7f070095
 int drawable tooltip_frame_light 0x7f070096
+int drawable vehicle 0x7f070097
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002

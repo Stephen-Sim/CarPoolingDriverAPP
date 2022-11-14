@@ -1,12 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vehicle="clr-namespace:CarPoolingDriverAPP.ViewModels.Menu.Vehicle"
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False"
              x:Class="CarPoolingDriverAPP.Views.Menu.Vehicle.VehicleInformationPage">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#f5c542"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vehicle:VehicleInformationPageViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Margin="10" RowDefinitions="60, *">
+            <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
+
+            <StackLayout Grid.Row="1">
+                <ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="Red">
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Button Text="Add New Vehicle" VerticalOptions="EndAndExpand" Command="{Binding AddNewVehicleClicked}"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
