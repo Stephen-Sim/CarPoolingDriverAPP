@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vehicle="clr-namespace:CarPoolingDriverAPP.ViewModels.Menu.Vehicle"
              Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False"
              x:Class="CarPoolingDriverAPP.Views.Menu.Vehicle.AddOrEditVehiclePage">
 
@@ -10,44 +10,49 @@
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Margin" Value="2"/>
             <Setter Property="BackgroundColor" Value="#f5c542"/>
         </Style>
     </ContentPage.Resources>
 
+    <ContentPage.BindingContext>
+        <vehicle:AddOrEditVehiclePageViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <Grid Margin="10" RowDefinitions="60, *">
-            <Image Margin="0, 0, 0, 10" Source="vehicle" HorizontalOptions="Start"/>
+            <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
 
             <StackLayout Grid.Row="1">
-                <Frame HeightRequest="130" WidthRequest="130" Padding="0" Margin="0" HorizontalOptions="Center" CornerRadius="100">
-                    <Image Source="logo"/>
+                <Frame HeightRequest="130" WidthRequest="130" Padding="0" Margin="0" HorizontalOptions="Center" BackgroundColor="Transparent">
+                    <Image Source="vehicle"/>
                 </Frame>
 
                 <StackLayout Margin="0, 10, 0, 0">
                     <Label Text="Vehicle Name"/>
-                    <Entry Placeholder="Vehicle Name" Text="{Binding User.PhoneNo}"/>
+                    <Entry Placeholder="Vehicle Name" Text="{Binding Vehicle.Name}"/>
                 </StackLayout>
                 
                 <StackLayout Margin="0, 10, 0, 0">
                     <Label Text="Car Plat"/>
-                    <Entry Placeholder="Car Plat" Text="{Binding User.PhoneNo}"/>
+                    <Entry Placeholder="Car Plat" Text="{Binding Vehicle.PlatNo}"/>
                 </StackLayout>
 
                 <StackLayout Margin="0, 10, 0, 0">
                     <Label Text="Color"/>
-                    <Entry Placeholder="Color" Text="{Binding User.PhoneNo}"/>
+                    <Entry Placeholder="Color" Text="{Binding Vehicle.Color}"/>
                 </StackLayout>
 
                 <StackLayout Margin="0, 10, 0, 0">
                     <Label Text="Capacity"/>
-                    <Entry Placeholder="Capacity" Text="{Binding User.PhoneNo}" Keyboard="Numeric"  MaxLength="1"/>
+                    <Entry Placeholder="Capacity" Text="{Binding Vehicle.Capacity}" Keyboard="Numeric" MaxLength="1"/>
                 </StackLayout>
 
                 <Grid ColumnDefinitions="*, *">
-                    <Button Text="Create"/>
-                    <Button Text="Cancel" Grid.Column="1"/>
+                    <Button Text="{Binding CreteOrEditButtonText}" Command="{Binding CreateButtonClicked}"/>
+                    <Button Text="Cancel" Grid.Column="1" Command="{Binding CancelButtonClicked}"/>
                 </Grid>
+                <Button IsVisible="{Binding IsEdit}" Text="Delete Vehicle" BackgroundColor="#f56042" Grid.Column="1" Command="{Binding DeleteButtonClicked}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

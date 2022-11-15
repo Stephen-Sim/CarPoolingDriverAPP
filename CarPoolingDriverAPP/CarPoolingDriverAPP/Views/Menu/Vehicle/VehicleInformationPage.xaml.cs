@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarPoolingDriverAPP.ViewModels.Menu.Vehicle;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace CarPoolingDriverAPP.Views.Menu.Vehicle
         public VehicleInformationPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            this.BindingContext = new VehicleInformationPageViewModel();
         }
     }
 }

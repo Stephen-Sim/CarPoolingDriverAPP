@@ -4,35 +4,45 @@
              Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False"
              x:Class="CarPoolingDriverAPP.Views.Menu.Vehicle.VehicleInformationPage">
     <ContentPage.Resources>
-        <Style TargetType="Entry">
-            <Setter Property="Margin" Value="10"/>
-        </Style>
-
-        <Style TargetType="Label">
-            <Setter Property="Margin" Value="10"/>
-        </Style>
-
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10"/>
             <Setter Property="BackgroundColor" Value="#f5c542"/>
         </Style>
     </ContentPage.Resources>
 
-    <ContentPage.BindingContext>
-        <vehicle:VehicleInformationPageViewModel/>
-    </ContentPage.BindingContext>
-
     <ContentPage.Content>
         <Grid Margin="10" RowDefinitions="60, *">
             <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
 
             <StackLayout Grid.Row="1">
-                <ListView>
+                <ListView x:Name="vehicleList" ItemsSource="{Binding Vehicles}" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid BackgroundColor="Red">
+                                <Grid Margin="10" RowDefinitions="90" ColumnDefinitions="90, *, 30">
+                                    <Image Margin="10" Source="vehicle" BackgroundColor="Transparent"/>
 
+                                    <Grid Grid.Column="1" RowDefinitions="*, *" VerticalOptions="CenterAndExpand">
+                                        <Label FontSize="20" FontAttributes="Bold">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding Name}"/>
+                                                    <Span Text=" - "/>
+                                                    <Span Text="{Binding Color}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label Grid.Row="1" FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Car Plat : "/>
+                                                    <Span Text="{Binding PlatNo}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </Grid>
+                                    <ImageButton Command="{Binding BindingContext.EditButtonClicked, Source={x:Reference Name=vehicleList}}" CommandParameter="{Binding .}" Grid.Column="2" Source="navigation" BackgroundColor="Transparent"/>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
