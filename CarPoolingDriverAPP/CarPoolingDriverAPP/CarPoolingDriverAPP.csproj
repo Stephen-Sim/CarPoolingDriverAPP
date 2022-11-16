@@ -11,9 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Commons\**" />
-    <EmbeddedResource Remove="Commons\**" />
-    <None Remove="Commons\**" />
+    <None Remove="Commons\Fonts\Consolas.ttf" />
+    <None Remove="Commons\Fonts\Roboto.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Commons\Fonts\Consolas.ttf" />
+    <EmbeddedResource Include="Commons\Fonts\Roboto.ttf" />
   </ItemGroup>
 
   <ItemGroup>

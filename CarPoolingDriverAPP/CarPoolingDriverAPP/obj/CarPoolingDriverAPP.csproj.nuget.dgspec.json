@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simsh\\OneDrive\\Desktop\\Diploma Project\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj": {}
+    "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simsh\\OneDrive\\Desktop\\Diploma Project\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj": {
+    "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simsh\\OneDrive\\Desktop\\Diploma Project\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj",
+        "projectUniqueName": "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj",
         "projectName": "CarPoolingDriverAPP",
-        "projectPath": "C:\\Users\\simsh\\OneDrive\\Desktop\\Diploma Project\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj",
+        "projectPath": "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj",
         "packagesPath": "C:\\Users\\simsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simsh\\OneDrive\\Desktop\\Diploma Project\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\obj\\",
+        "outputPath": "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
