@@ -70,3 +70,7 @@ C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\refint\CarPoolingDriverAPP.dll
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\CarPoolingDriverAPP.pdb
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\ref\CarPoolingDriverAPP.dll
+C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Home\PinEndLocationPage.xaml.g.cs
+C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Home\PinStartLocationPage.xaml.g.cs
+C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Home\ConfirmTripPage.xaml.g.cs
+C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Trip\TripPage.xaml.g.cs

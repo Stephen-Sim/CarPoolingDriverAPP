@@ -1,13 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:home="clr-namespace:CarPoolingDriverAPP.ViewModels.Home"
              Shell.NavBarIsVisible="False"
              x:Class="CarPoolingDriverAPP.Views.Home.HomePage">
+    <ContentPage.BindingContext>
+        <home:HomePageViewModel/>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Margin="10" RowDefinitions="60, 630">
+            <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
+
+            <StackLayout Grid.Row="1">
+
+                <Grid RowDefinitions="*, *">
+                    <Grid ColumnDefinitions="50, *" Margin="5">
+                        <Image Source="current"/>
+                        <StackLayout Grid.Column="1">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PinLacationStackLayoutTapped}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="{Binding FromButtonText}" TextColor="{Binding ButtonTextColor}" FontSize="18" Padding="7"/>
+                            <BoxView HeightRequest="0.5" BackgroundColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid Grid.Row="1" ColumnDefinitions="50, *" Margin="5">
+                        <Image Source="desti"/>
+                        <StackLayout Grid.Column="1">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PinLacationStackLayoutTapped}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="{Binding ToButtonText}" TextColor="{Binding ButtonTextColor}" FontSize="18" Padding="8"/>
+                            <BoxView HeightRequest="0.2" BackgroundColor="Black"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+
+                <ContentView HeightRequest="440" Content="{Binding Map}"/>
+                <Button Grid.Row="2" Text="{Binding ButtonText}" Command="{Binding PlaceRequestButtonClicked}" VerticalOptions="EndAndExpand" BackgroundColor="#f5c542"/>
+            </StackLayout>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

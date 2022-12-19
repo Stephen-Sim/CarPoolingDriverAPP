@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.NavBarIsVisible="False"
              x:Class="CarPoolingDriverAPP.Views.Menu.MenuPage">
+
     <ContentPage.Content>
         <Grid Margin="10" RowDefinitions="60, 630">
             <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>

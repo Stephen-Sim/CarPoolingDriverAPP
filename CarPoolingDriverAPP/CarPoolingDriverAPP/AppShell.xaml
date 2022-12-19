@@ -4,13 +4,14 @@
        xmlns:home="clr-namespace:CarPoolingDriverAPP.Views.Home"
        xmlns:menu="clr-namespace:CarPoolingDriverAPP.Views.Menu"
        xmlns:auth="clr-namespace:CarPoolingDriverAPP.Views.Auth"
+       xmlns:trip="clr-namespace:CarPoolingDriverAPP.Views.Trip"
        x:Class="CarPoolingDriverAPP.AppShell">
     <TabBar>
         <Tab Title="Home" Icon="home.png" Route="HomePage">
             <ShellContent  ContentTemplate="{DataTemplate home:HomePage}"/>
         </Tab>
-        <Tab Title="Request" Icon="request.png" Route="RequestPage">
-            <ShellContent ContentTemplate="{DataTemplate home:HomePage}"/>
+        <Tab Title="Trip" Icon="request.png" Route="TripPage">
+            <ShellContent ContentTemplate="{DataTemplate trip:TripPage}"/>
         </Tab>
         <Tab Title="Menu" Icon="menu.png" Route="MenuPage">
             <ShellContent ContentTemplate="{DataTemplate menu:MenuPage}"/>

@@ -1,4 +1,5 @@
 ﻿using CarPoolingDriverAPP.Views.Auth;
+using CarPoolingDriverAPP.Views.Home;
 using CarPoolingDriverAPP.Views.Menu;
 using CarPoolingDriverAPP.Views.Menu.Vehicle;
 using System;
@@ -21,6 +22,11 @@ namespace CarPoolingDriverAPP
 
             // Auth
             Routing.RegisterRoute($"Auth/{nameof(RegisterPage)}", typeof(RegisterPage));
+
+            // Home
+            Routing.RegisterRoute($"Home/{nameof(PinStartLocationPage)}", typeof(PinStartLocationPage));
+            Routing.RegisterRoute($"Home/{nameof(PinEndLocationPage)}", typeof(PinEndLocationPage));
+            Routing.RegisterRoute($"Home/{nameof(ConfirmTripPage)}", typeof(ConfirmTripPage));
 
             // Menu
             Routing.RegisterRoute($"Menu/{nameof(EditProfilePage)}", typeof(EditProfilePage));

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Shell.PresentationMode="ModalAnimated"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:home="clr-namespace:CarPoolingDriverAPP.ViewModels.Home"
+             x:Class="CarPoolingDriverAPP.Views.Home.ConfirmTripPage">
+    <ContentPage.BindingContext>
+        <home:ConfirmTripPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid Margin="10, 10, 10, 5" RowDefinitions="60, *, 70">
+            <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
+
+            <StackLayout Grid.Row="1">
+                <ContentView HeightRequest="600" Content="{Binding Map}"/>
+                <Grid RowDefinitions="60" ColumnDefinitions="60, *">
+                    <Image HeightRequest="60" Source="vehicle"/>
+                    <Picker ItemsSource="{Binding VehichlesList}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedVehichle, Mode=TwoWay}" HeightRequest="60" Grid.Column="1" Title="Select a Vehicle"/>
+                </Grid>
+                <DatePicker HeightRequest="60" Date="{Binding SelectedDate}"/>
+                <TimePicker HeightRequest="60" Time="{Binding SelectedTime}"/>
+            </StackLayout>
+
+            <Grid Grid.Row="2" ColumnDefinitions="*, *" Margin="0, 10, 0, 10">
+                <Button Text="Confirm" Command="{Binding ConfirmButtonClicked}" BackgroundColor="#f5c542"/>
+                <Button Grid.Column="1" Text="Cancel" Command="{Binding CancelButtonClicked}" BackgroundColor="#f5c542"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

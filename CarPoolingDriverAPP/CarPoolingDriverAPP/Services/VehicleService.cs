@@ -6,13 +6,12 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CarPoolingDriverAPP.Services
 {
     public class VehicleService
     {
-        private string url = "http://10.105.13.82:45456/api/Vehicle/";
+        private string url = $"{APIConstant.APIURL}Vehicle/";
         public HttpClient client { get; set; }
 
         public VehicleService()

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gu6poIVpwGu7V3ktXZJL07CZcwvDjE4V7Sh4rLWg0CdpnXnU4syM0yk6unsTyEdckok80tug/tPK1XVjExRJWQ==",
+  "dgSpecHash": "DP4vHlfxYmTHAZdDYedOM1NqaTIuBgnuKclEjIjBvhpWnAPqL2BUL2/FL0uoHQKurV/rgilzgRXV+njEPFw71Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\simsh\\Desktop\\CarPooling System\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP\\CarPoolingDriverAPP.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,8 @@
     "C:\\Users\\simsh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\simsh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\simsh\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\simsh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\simsh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\simsh\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2196\\xamarin.forms.maps.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }
