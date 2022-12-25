@@ -71,7 +71,7 @@ namespace CarPoolingDriverAPP.ViewModels.Home
 
         public TripRequest Request { get; set; }
 
-        private string buttonText = "Place your Request";
+        private string buttonText = "Place your Trip";
         public string ButtonText
         {
             get { return buttonText; }

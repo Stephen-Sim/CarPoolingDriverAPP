@@ -36,6 +36,12 @@ namespace CarPoolingDriverAPP.ViewModels.Auth
                         return;
                     }
 
+                    if (Password.Length < 6)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Alert", "Password length must be greater than or equal to 6", "Ok");
+                        return;
+                    }
+
                     var request = new RegisterRequest
                     {
                         FirstName = FirstName,

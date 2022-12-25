@@ -1,5 +1,8 @@
 ﻿using CarPoolingDriverAPP.Models;
 using CarPoolingDriverAPP.Services;
+using CarPoolingDriverAPP.Views.Home;
+using CarPoolingDriverAPP.Views.Trip;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -44,16 +47,42 @@ namespace CarPoolingDriverAPP.ViewModels.Trip
             set { isRefreshing = value; OnPropertyChanged(); }
         }
 
-
         public ICommand ListViewRereshed
         {
             get
             {
-                return new Command(async () =>
+                return new Command(() =>
                 {
                     IsRefreshing = true;
                     this.LoadData();
                     IsRefreshing = false;
+                });
+            }
+        }
+
+        public Command ListViewItemTapped
+        {
+            get
+            {
+                return new Command(async (sender) => {
+                    var trip = (TripRequest) sender;
+
+                    if (trip.Status == "Searching")
+                    {
+                        await Shell.Current.GoToAsync($"Trip/{nameof(SearchingTripPage)}?TripId={trip.Id}");
+                    }
+                    else if (trip.Status == "Pending")
+                    {
+                        await Shell.Current.GoToAsync($"Trip/{nameof(PendingTripPage)}?TripId={trip.Id}");
+                    }
+                    else if (trip.Status == "Canceled")
+                    {
+                        await Shell.Current.GoToAsync($"Trip/{nameof(CanceledTripPage)}?TripId={trip.Id}");
+                    }
+                    else if (trip.Status == "Completed")
+                    {
+                        await Shell.Current.GoToAsync($"Trip/{nameof(CompletedTripPage)}?TripId={trip.Id}");
+                    }
                 });
             }
         }

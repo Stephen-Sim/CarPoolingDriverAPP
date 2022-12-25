@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:trip="clr-namespace:CarPoolingDriverAPP.ViewModels.Trip"
+             x:Class="CarPoolingDriverAPP.Views.Trip.CanceledTripPage" Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <trip:CanceledTripPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#f5c542"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="*">
+            <ContentView Content="{Binding Map}"/>
+            <Button VerticalOptions="EndAndExpand" FontSize="22" Margin="10" HeightRequest="50" CornerRadius="50" Command="{Binding PlaceTheRequestButtonClicked}" Text="Place the Trip Again"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

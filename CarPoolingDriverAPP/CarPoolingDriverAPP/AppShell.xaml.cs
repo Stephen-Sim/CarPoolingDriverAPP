@@ -2,6 +2,7 @@
 using CarPoolingDriverAPP.Views.Home;
 using CarPoolingDriverAPP.Views.Menu;
 using CarPoolingDriverAPP.Views.Menu.Vehicle;
+using CarPoolingDriverAPP.Views.Trip;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,12 @@ namespace CarPoolingDriverAPP
             Routing.RegisterRoute($"Home/{nameof(PinStartLocationPage)}", typeof(PinStartLocationPage));
             Routing.RegisterRoute($"Home/{nameof(PinEndLocationPage)}", typeof(PinEndLocationPage));
             Routing.RegisterRoute($"Home/{nameof(ConfirmTripPage)}", typeof(ConfirmTripPage));
+
+            // Trip
+            Routing.RegisterRoute($"Trip/{nameof(SearchingTripPage)}", typeof(SearchingTripPage));
+            Routing.RegisterRoute($"Trip/{nameof(CanceledTripPage)}", typeof(CanceledTripPage));
+            Routing.RegisterRoute($"Trip/{nameof(PendingTripPage)}", typeof(PendingTripPage));
+            Routing.RegisterRoute($"Trip/{nameof(CompletedTripPage)}", typeof(CompletedTripPage));
 
             // Menu
             Routing.RegisterRoute($"Menu/{nameof(EditProfilePage)}", typeof(EditProfilePage));

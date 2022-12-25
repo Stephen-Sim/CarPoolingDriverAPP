@@ -20,7 +20,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding PinLacationStackLayoutTapped}"/>
                             </StackLayout.GestureRecognizers>
-                            <Label Text="{Binding FromButtonText}" TextColor="{Binding ButtonTextColor}" FontSize="18" Padding="7"/>
+                            <Label Text="{Binding FromButtonText}" TextColor="{Binding ButtonTextColor}" FontSize="18" Padding="11"/>
                             <BoxView HeightRequest="0.5" BackgroundColor="Black"/>
                         </StackLayout>
                     </Grid>
@@ -32,7 +32,7 @@
                                 <TapGestureRecognizer Command="{Binding PinLacationStackLayoutTapped}"/>
                             </StackLayout.GestureRecognizers>
                             <Label Text="{Binding ToButtonText}" TextColor="{Binding ButtonTextColor}" FontSize="18" Padding="8"/>
-                            <BoxView HeightRequest="0.2" BackgroundColor="Black"/>
+                            <BoxView HeightRequest="0.5" BackgroundColor="Black"/>
                         </StackLayout>
                     </Grid>
                 </Grid>

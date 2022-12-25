@@ -5,7 +5,9 @@
        xmlns:menu="clr-namespace:CarPoolingDriverAPP.Views.Menu"
        xmlns:auth="clr-namespace:CarPoolingDriverAPP.Views.Auth"
        xmlns:trip="clr-namespace:CarPoolingDriverAPP.Views.Trip"
-       x:Class="CarPoolingDriverAPP.AppShell">
+       x:Class="CarPoolingDriverAPP.AppShell"
+       Shell.TabBarTitleColor="Black"
+       Shell.BackgroundColor="#f5c542">
     <TabBar>
         <Tab Title="Home" Icon="home.png" Route="HomePage">
             <ShellContent  ContentTemplate="{DataTemplate home:HomePage}"/>

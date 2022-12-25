@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:trip="clr-namespace:CarPoolingDriverAPP.ViewModels.Trip"
+             x:Class="CarPoolingDriverAPP.Views.Trip.PendingTripPage" Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <trip:PendingTripPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#f5c542"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="*, 250, 50">
+            <ContentView Content="{Binding Map}"/>
+            <ListView Grid.Row="1" ItemsSource="{Binding RequestList}" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black" Padding="5" BackgroundColor="LightYellow" Margin="3">
+                                <Grid ColumnDefinitions="30, *, 110" RowDefinitions="90">
+                                    <Image Source="Pin" HeightRequest="70" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                                    <StackLayout Grid.Column="1" Padding="10">
+                                        <Label Grid.Column="2" FontSize="20" Margin="0" Padding="0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding PassengerName}" FontAttributes="Bold" FontSize="20"/>
+                                                    <Span Text="&#x09;&#x09;&#x09;&#x09;("/>
+                                                    <Span Text="{Binding NumberOfPassengers}"/>
+                                                    <Span Text="🤵)"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="{Binding DiplayFromAddress}" Margin="0" Padding="0"/>
+                                    </StackLayout>
+
+                                    <Label Grid.Column="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="RM " FontSize="22"/>
+                                                <Span Text="{Binding Charges}" FontSize="22" FontAttributes="Bold"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="2" Command="{Binding CompleteTripButtonClicked}" FontSize="16" CornerRadius="50" Text="Complete the Trip"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
