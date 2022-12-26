@@ -78,3 +78,4 @@ C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Trip\CanceledTripPage.xaml.g.cs
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Trip\CompletedTripPage.xaml.g.cs
 C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Trip\PendingTripPage.xaml.g.cs
+C:\Users\simsh\Desktop\CarPooling System\CarPoolingDriverAPP\CarPoolingDriverAPP\CarPoolingDriverAPP\obj\Debug\netstandard2.0\Views\Trip\Chat\ChatPassengerPage.xaml.g.cs

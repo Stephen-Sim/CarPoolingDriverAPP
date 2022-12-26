@@ -1,5 +1,7 @@
 ﻿using CarPoolingDriverAPP.Models;
 using CarPoolingDriverAPP.Services;
+using CarPoolingDriverAPP.Views.Trip.Chat;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,6 +63,7 @@ namespace CarPoolingDriverAPP.ViewModels.Trip
         {
             Map = new Map();
             tripService = new TripService();
+            chatService = new ChatService();
         }
 
         private Position FindMidPoint(double lat1, double lon1, double lat2, double lon2)
@@ -153,6 +156,22 @@ namespace CarPoolingDriverAPP.ViewModels.Trip
                             await App.Current.MainPage.DisplayAlert("Alert", "Operation Failed!!", "Ok");
                         }
                     }
+                });
+            }
+        }
+
+        public ChatService chatService { get; set; }
+
+        public ICommand ListViewItemTapped
+        {
+            get
+            {
+                return new Command(async (bindingObject) =>
+                {
+                    var tripRequest = (RequestRequest)bindingObject;
+                    var content = $"{this.tripId},{tripRequest.TripRequestId}";
+                    // await chatService.Connect((int)tripRequest.TripRequestId);
+                    await Shell.Current.GoToAsync($"Chat/{nameof(ChatPassengerPage)}?Content={content}");
                 });
             }
         }

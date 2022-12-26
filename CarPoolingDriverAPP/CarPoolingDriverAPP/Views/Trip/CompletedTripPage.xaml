@@ -24,8 +24,8 @@
                     <Label FontSize="20" FontAttributes="Bold" Text="Your Raing of the Trip :"/>
                     <Label FontSize="20" FontAttributes="Bold" Grid.Row="1" Text="Total Earned :"/>
 
-                    <Label FontSize="20" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Text="{Binding Rating}" HorizontalOptions="CenterAndExpand"/>
-                    <Label FontSize="20" FontAttributes="Bold" Grid.Column="1" Text="{Binding TotalEarned}" HorizontalOptions="CenterAndExpand"/>
+                    <Label FontSize="20" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Text="{Binding Rating, TargetNullValue='0.0'}" HorizontalOptions="Start"/>
+                    <Label FontSize="20" FontAttributes="Bold" Grid.Column="1" Text="{Binding TotalEarned}" HorizontalOptions="Start"/>
                 </Grid>
             </Frame>
             <Button Grid.Row="2" FontSize="20" Margin="5, 0, 5, 10" HeightRequest="50" CornerRadius="50" Command="{Binding PlaceTheRequestButtonClicked}" Text="Place the Trip Again"/>

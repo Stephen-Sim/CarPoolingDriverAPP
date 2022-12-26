@@ -7,6 +7,7 @@ namespace CarPoolingDriverAPP.Models
     public class RequestRequest
     {
         public int? Id { get; set; }
+        public int? TripRequestId { get; set; }
         public string PassengerName { get; set; } = string.Empty;
         public string RequestNumber { get; set; } = string.Empty;
         public decimal? Charges { get; set; }

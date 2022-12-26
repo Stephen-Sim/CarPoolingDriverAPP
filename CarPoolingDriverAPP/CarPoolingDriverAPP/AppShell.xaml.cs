@@ -3,6 +3,7 @@ using CarPoolingDriverAPP.Views.Home;
 using CarPoolingDriverAPP.Views.Menu;
 using CarPoolingDriverAPP.Views.Menu.Vehicle;
 using CarPoolingDriverAPP.Views.Trip;
+using CarPoolingDriverAPP.Views.Trip.Chat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,9 @@ namespace CarPoolingDriverAPP
             Routing.RegisterRoute($"Trip/{nameof(CanceledTripPage)}", typeof(CanceledTripPage));
             Routing.RegisterRoute($"Trip/{nameof(PendingTripPage)}", typeof(PendingTripPage));
             Routing.RegisterRoute($"Trip/{nameof(CompletedTripPage)}", typeof(CompletedTripPage));
+
+            // Chat
+            Routing.RegisterRoute($"Chat/{nameof(ChatPassengerPage)}", typeof(ChatPassengerPage));
 
             // Menu
             Routing.RegisterRoute($"Menu/{nameof(EditProfilePage)}", typeof(EditProfilePage));
