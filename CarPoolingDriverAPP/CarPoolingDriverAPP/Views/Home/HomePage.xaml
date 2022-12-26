@@ -8,11 +8,10 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <Grid Margin="10" RowDefinitions="60, 630">
+        <Grid Margin="10" RowDefinitions="60, *, auto">
             <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
 
             <StackLayout Grid.Row="1">
-
                 <Grid RowDefinitions="*, *">
                     <Grid ColumnDefinitions="50, *" Margin="5">
                         <Image Source="current"/>
@@ -36,11 +35,10 @@
                         </StackLayout>
                     </Grid>
                 </Grid>
-
                 <ContentView HeightRequest="440" Content="{Binding Map}"/>
-                <Button Grid.Row="2" Text="{Binding ButtonText}" Command="{Binding PlaceRequestButtonClicked}" VerticalOptions="EndAndExpand" BackgroundColor="#f5c542"/>
             </StackLayout>
-
+            
+            <Button Grid.Row="2" Text="{Binding ButtonText}" Command="{Binding PlaceRequestButtonClicked}" VerticalOptions="EndAndExpand" BackgroundColor="#f5c542"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

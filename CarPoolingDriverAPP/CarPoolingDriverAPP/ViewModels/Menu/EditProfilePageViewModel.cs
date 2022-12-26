@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using static Xamarin.Essentials.Permissions;
 
 namespace CarPoolingDriverAPP.ViewModels.Menu
 {
@@ -124,6 +125,12 @@ namespace CarPoolingDriverAPP.ViewModels.Menu
                     if (string.IsNullOrEmpty(User.FirstName) || string.IsNullOrEmpty(user.LastName) || string.IsNullOrEmpty(User.PhoneNo) || (Genders[0] == false && Genders[1] == false))
                     {
                         await App.Current.MainPage.DisplayAlert("Alert", "All the fields are required!!", "Ok");
+                        return;
+                    }
+
+                    if (User.PhoneNo.Length < 10)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Alert", "Invalid Phone Number Length", "Ok");
                         return;
                     }
 
