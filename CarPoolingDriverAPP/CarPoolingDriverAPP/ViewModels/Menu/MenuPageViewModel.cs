@@ -36,6 +36,17 @@ namespace CarPoolingDriverAPP.ViewModels.Menu
             }
         }
 
+        public ICommand StatsFrameClicked
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await Shell.Current.GoToAsync($"Menu/{nameof(StatsPage)}");
+                });
+            }
+        }
+
         public ICommand EditImageButtonClick
         {
             get

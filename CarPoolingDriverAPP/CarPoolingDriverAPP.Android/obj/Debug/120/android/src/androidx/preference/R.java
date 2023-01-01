@@ -974,13 +974,13 @@ public final class R {
 		public static final int abc_toolbar_collapse_description = 0x7f0e001a;
 		public static final int copy = 0x7f0e0035;
 		public static final int expand_button_title = 0x7f0e0038;
-		public static final int not_set = 0x7f0e007b;
-		public static final int preference_copied = 0x7f0e0082;
-		public static final int search_menu_title = 0x7f0e0083;
-		public static final int status_bar_notification_info_overflow = 0x7f0e0084;
-		public static final int summary_collapsed_preference_list = 0x7f0e0085;
-		public static final int v7_preference_off = 0x7f0e0086;
-		public static final int v7_preference_on = 0x7f0e0087;
+		public static final int not_set = 0x7f0e007c;
+		public static final int preference_copied = 0x7f0e0083;
+		public static final int search_menu_title = 0x7f0e0084;
+		public static final int status_bar_notification_info_overflow = 0x7f0e0085;
+		public static final int summary_collapsed_preference_list = 0x7f0e0086;
+		public static final int v7_preference_off = 0x7f0e0087;
+		public static final int v7_preference_on = 0x7f0e0088;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f0f0000;

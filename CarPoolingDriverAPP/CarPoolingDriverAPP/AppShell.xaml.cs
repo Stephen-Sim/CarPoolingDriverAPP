@@ -41,10 +41,11 @@ namespace CarPoolingDriverAPP
 
             // Menu
             Routing.RegisterRoute($"Menu/{nameof(EditProfilePage)}", typeof(EditProfilePage));
-            Routing.RegisterRoute($"Menu/{nameof(ChangePasswordPage)}", typeof(ChangePasswordPage));
-            Routing.RegisterRoute($"Menu/{nameof(AboutTheAppPage)}", typeof(AboutTheAppPage));
             Routing.RegisterRoute($"Menu/Vehicle/{nameof(VehicleInformationPage)}", typeof(VehicleInformationPage));
             Routing.RegisterRoute($"Menu/Vehicle/{nameof(AddOrEditVehiclePage)}", typeof(AddOrEditVehiclePage));
+            Routing.RegisterRoute($"Menu/{nameof(StatsPage)}", typeof(StatsPage));
+            Routing.RegisterRoute($"Menu/{nameof(ChangePasswordPage)}", typeof(ChangePasswordPage));
+            Routing.RegisterRoute($"Menu/{nameof(AboutTheAppPage)}", typeof(AboutTheAppPage));
 
         }
     }

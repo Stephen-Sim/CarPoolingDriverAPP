@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:menu="clr-namespace:CarPoolingDriverAPP.ViewModels.Menu" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="CarPoolingDriverAPP.Views.Menu.StatsPage"
+             Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <menu:StatsPageViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid Margin="10" RowDefinitions="60, 110, *">
+            <Image Margin="0, 0, 0, 10" Source="header" HorizontalOptions="Start"/>
+
+            <Frame Grid.Row="1" BackgroundColor="LightYellow" BorderColor="Gray" CornerRadius="20">
+                <Grid ColumnDefinitions="70, *">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="Center" Padding="0" Margin="0" CornerRadius="50" HeightRequest="70" WidthRequest="70" BorderColor="LightGray">
+                        <Image Source="{Binding ProfileImage, TargetNullValue='profile'}" HorizontalOptions="CenterAndExpand"/>
+                    </Frame>
+                    <StackLayout Grid.Column="1" Padding="5">
+                        <Label FontSize="20">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding DriverInfo.DriverName}"/>
+                                    <Span Text=" ("/>
+                                    <Span Text="{Binding DriverInfo.Rating}"/>
+                                    <Span Text=")"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label FontSize="20">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Total Earned: RM "/>
+                                    <Span Text="{Binding DriverInfo.TotalEarned}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Grid Grid.Row="2" RowDefinitions="auto, *, auto">
+                <Picker ItemsSource="{Binding ScheduleList}" ItemDisplayBinding="{Binding Name}" VerticalOptions="StartAndExpand" Title="Please Select the Schedule Format" SelectedItem="{Binding SelectedSchedule}"/>
+                <microcharts:ChartView Grid.Row="1" Chart="{Binding StatChart}"/>
+                <StackLayout Grid.Row="2">
+                    <Frame BackgroundColor="LightYellow" BorderColor="Gray" CornerRadius="20" Padding="15">
+                        <Grid>
+                            <Label FontSize="20" HorizontalOptions="Start" Text="Total Earned"/>
+                            <Label FontSize="20" HorizontalOptions="End" Text="{Binding TotalEarned}"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="LightYellow" BorderColor="Gray" CornerRadius="20" Padding="15">
+                        <Grid>
+                            <Label FontSize="20" HorizontalOptions="Start" Text="Total Passengers"/>
+                            <Label FontSize="20" HorizontalOptions="End" Text="{Binding TotalPassengers}"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
