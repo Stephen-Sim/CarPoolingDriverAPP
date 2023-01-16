@@ -33,7 +33,7 @@ namespace CarPoolingDriverAPP.ViewModels.Home
                     Map.Pins.Clear();
                     stringRequest = string.Empty;
                     ButtonTextColor = "Gray";
-                    ButtonText = "Place your Request";
+                    ButtonText = "Place your Trip";
                     ToButtonText = "To: Destination Location";
                     FromButtonText = "From: Current Location";
                     return;
